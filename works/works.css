@@ -1,0 +1,100 @@
+.works-header {
+    height: auto;
+    /* 既存headerの固定高を解除して崩れ防止 */
+    padding-bottom: 16px;
+}
+
+.works-lead {
+    margin: 0.5em 0 0;
+    line-height: 1.7;
+}
+
+.works-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+    margin: 10px 0 14px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+}
+
+.meta-item {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.meta-label {
+    min-width: 4em;
+    color: #555;
+    font-weight: bold;
+}
+
+.meta-value {
+    color: #111;
+}
+
+.works-box {
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    padding: 10px 12px;
+}
+
+.works-list {
+    margin: 0 0 0 1.2em;
+    padding: 0;
+}
+
+.note {
+    margin: 0;
+    font-size: 13px;
+}
+
+.tag-list {
+    margin: 0;
+    padding: 0;
+}
+
+.tag-list li {
+    display: inline-block;
+    margin: 6px 6px 0 0;
+    padding: 4px 8px;
+    border: 1px solid #cfe0ef;
+    background: #f3f9ff;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.works-media {
+    margin-top: 10px;
+}
+
+.works-links {
+    margin: 0 0 0 1.2em;
+    padding: 0;
+}
+
+.works-nav {
+    margin-top: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #c7c7c7;
+    background: #f7f7f7;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #efefef;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* 右カラムが下に回る前提で、情報の詰まりを抑える */
+    .works-meta {
+        grid-template-columns: 1fr;
+    }
+}

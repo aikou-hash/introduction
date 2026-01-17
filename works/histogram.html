@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>ヒストグラム画像変換｜愛甲 隼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="works.css">
+</head>
+
+<body>
+    <div id="outer">
+
+        <header class="works-header">
+            <h1>ヒストグラムを用いた画像変換処理の実装</h1>
+            <p class="works-lead">
+                元画像のヒストグラムを解析し、
+                その分布を維持したまま別画像を生成するアルゴリズムを考案し、実装した。
+            </p>
+        </header>
+
+        <div id="content">
+            <div class="inner">
+                <div class="works-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">種別</span>
+                        <span class="meta-value">研究</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">期間</span>
+                        <span class="meta-value">2021/5 〜 2021/6</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">担当</span>
+                        <span class="meta-value">設計 / 実装 / テスト</span>
+                    </div>
+                </div>
+
+                <h2>概要</h2>
+                <div class="works-box">
+                    <ul class="works-list">
+                        <li>研究室内コンペでの発表を目的として、個人で制作</li>
+                        <li>参考画像を用いて、元画像のヒストグラムを保ったまま別画像を生成</li>
+                        <li>画像処理におけるヒストグラム操作の理解を深めることを目的とした</li>
+                    </ul>
+                </div>
+
+                <h2>画面・動作イメージ</h2>
+                <div class="works-box">
+                    <img src="../images/histgram.png" alt="ヒストグラム画像変換の例">
+                </div>
+
+                <h2>使用技術</h2>
+                <div class="works-box">
+                    <ul class="tag-list">
+                        <li>C++</li>
+                    </ul>
+                </div>
+
+                <h2>機能</h2>
+                <div class="works-box">
+                    <ul class="works-list">
+                        <li>元画像を読み込み、画素情報からヒストグラムを生成</li>
+                        <li>参考画像を解析し、元画像と同様の色調を持つ画像を生成</li>
+                    </ul>
+                </div>
+
+                <h2>工夫点</h2>
+                <div class="works-box">
+                    <ul class="works-list">
+                        <li>
+                            処理時間を短縮するため、画素データの並び替えにコムソートを採用
+                        </li>
+                        <li>
+                            参考画像を変更するだけで、異なる色調の画像を生成できる構成とした
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>リンク</h2>
+                <div class="works-box">
+                    <ul class="works-links">
+                        <li>
+                            <a href="../materials/histgram_aikou.pdf" target="_blank" rel="noopener noreferrer">
+                                説明資料（PDF / 閲覧）
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../materials/histgram_aikou.pptx" download>
+                                説明資料（PPTX / ダウンロード）
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="works-nav">
+                    <a class="btn" href="../index.html">トップへ戻る</a>
+                </div>
+
+            </div>
+        </div>
+
+        <aside>
+            <div class="right-title">プログラム集</div>
+            <div class="link">
+                <ul>
+                    <li><a href="discord-bot.html">Discord Bot</a></li>
+                    <li><a href="minecraft-addon.html">マイクラアドオン</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <footer>2026 愛甲 隼のホームページ</footer>
+
+    </div>
+</body>
+
+</html>

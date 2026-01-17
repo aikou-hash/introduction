@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>3D テトリス｜愛甲 隼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="works.css">
+</head>
+
+<body>
+    <div id="outer">
+
+        <header class="works-header">
+            <h1>3D テトリス</h1>
+            <p class="works-lead">
+                従来2Dで完成度の高いゲームとして成立しているテトリスを3D空間へ拡張し、
+                「3D化することで、より楽しいゲームとして成立させること」を研究テーマとして制作した。<br>
+                特に、プレイヤーが状況を判断しやすく、操作に集中できる設計を重視した。
+            </p>
+        </header>
+
+        <div id="content">
+            <div class="inner">
+
+                <div class="works-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">種別</span><span class="meta-value">個人制作（研究）</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">期間</span>
+                        <span class="meta-value">2021/2 〜 2021/4</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">担当</span><span class="meta-value">設計 / 実装 / テスト</span>
+                    </div>
+                </div>
+
+                <h2>概要</h2>
+                <!-- <div class="works-box">
+                    <ul class="works-list">
+                        <li>研究室内コンペでの発表を目的として、個人で制作</li>
+                        <li>テトリスを3D化した際に生じる「把握しづらさ」が、楽しさを損なう要因となる点に着目</li>
+                        <li>操作量や視点移動を増やさず、直感的に判断できる構成を目標とした</li>
+                    </ul>
+                </div> -->
+                <div class="works-box">
+                    <img src="../images/3dtetris_material.jpg" alt="3Dテトリス説明資料画像">
+                </div>
+                <h2>画面・動作イメージ</h2>
+                <div class="works-box">
+                    <img src="../images/3dtetris_demo.png" alt="3Dテトリス説明資料画像">
+                </div>
+
+                <h2>使用技術</h2>
+                <div class="works-box">
+                    <ul class="tag-list">
+                        <li>C#</li>
+                        <li>Unity</li>
+                    </ul>
+                </div>
+
+                <h2>実装機能</h2>
+                <div class="works-box">
+                    <ul class="works-list">
+                        <li>ブロックの移動・回転・落下処理</li>
+                        <li>ライン判定および消去処理</li>
+                        <li>画面分割による全方向同時表示</li>
+                        <li>難易度設定</li>
+                    </ul>
+                </div>
+
+                <h2>工夫・設計上のポイント</h2>
+                <div class="works-box">
+                    <ul class="works-list">
+                        <li>
+                            初期段階ではカメラ視点を切り替える方式を採用していたが、
+                            視点操作が増えることで判断が遅れ、ゲームとしてのテンポや
+                            没入感が損なわれる課題があった。
+                            そこで画面分割方式へ変更し、操作を増やさずに
+                            常に全方向を把握できる構成とした。
+                        </li>
+                        <li>
+                            ゲームロジック、表示処理、UI制御を分離し、
+                            調整や試行錯誤を繰り返しやすい構成で実装した。
+                        </li>
+                        <li>
+                            難易度設定は3段階用意し、
+                            プレイヤーの熟練度に応じて楽しさを調整できる設計とした。
+                        </li>
+                        <li>
+                            BGMや演出を取り入れることで、
+                            ゲームへの没入感を高め、より良い体験が得られるようにした。
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>リンク</h2>
+                <div class="works-box">
+                    <ul class="works-links">
+                        <li>
+                            デモ動画（音量にご注意ください）
+                            <a href="https://www.youtube.com/watch?v=H2eoZlrT-KM" target="_blank"
+                                rel="noopener noreferrer"><br>
+                                https://www.youtube.com/watch?v=H2eoZlrT-KM
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="works-nav">
+                    <a class="btn" href="../index.html">トップへ戻る</a>
+                </div>
+
+            </div>
+        </div>
+
+        <aside>
+            <div class="right-title">プログラム集</div>
+            <div class="link">
+                <ul>
+                    <li><a href="discord-bot.html">Discord Bot</a></li>
+                    <li><a href="minecraft-addon.html">Minecraft アドオン</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <footer>2026 愛甲 隼のポートフォリオ</footer>
+
+    </div>
+</body>
+
+</html>
