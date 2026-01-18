@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>製作物名｜愛甲 隼</title>
+    <title>卒業研究｜愛甲 隼</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="works.css">
@@ -13,9 +13,10 @@
     <div id="outer">
 
         <header class="works-header">
-            <h1>製作物名</h1>
+            <h1>卒業研究</h1>
             <p class="works-lead">
-                1〜2行で概要を記載（何を解決するか何ができるか等）
+                「アクティブシェイプモデル（ASM）が適用可能な物体カテゴリの特徴分析」をテーマにした卒業研究です。<br>
+                情報保護の観点から詳細な数値やデータは非公開としていますが、研究の目的・アプローチ・得られた知見については可能な範囲で紹介します。
             </p>
         </header>
 
@@ -23,66 +24,83 @@
             <div class="inner">
 
                 <div class="works-meta">
-                    <div class="meta-item"><span class="meta-label">種別</span><span class="meta-value">例：個人開発 / 受託 /
-                            研究</span></div>
-                    <div class="meta-item"><span class="meta-label">期間</span><span
-                            class="meta-value">例：YYYY/MM〜YYYY/MM</span></div>
-                    <div class="meta-item"><span class="meta-label">担当</span><span class="meta-value">例：設計 / 実装 /
-                            テスト</span></div>
+                    <div class="meta-item">
+                        <span class="meta-label">種別</span>
+                        <span class="meta-value">研究</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">期間</span>
+                        <span class="meta-value">2022/3〜2022/11</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">担当</span>
+                        <span class="meta-value">実験、評価</span>
+                    </div>
                 </div>
 
                 <h2>概要</h2>
                 <div class="works-box">
                     <ul class="works-list">
-                        <li>目的（何のために作ったか）</li>
-                        <li>成果（何ができるようになったか）</li>
-                        <li>利用シーン（想定ユーザー／用途）</li>
+                        <li>
+                            アクティブシェイプモデル（ASM）が対象物体に対して有効に機能するか否かを、
+                            事前に判断できる指標を検討することを目的とした研究
+                        </li>
+                        <li>
+                            形状変形が安定して行える物体と、適用が困難な物体それぞれに共通する特徴を明らかにした
+                        </li>
+                        <li>
+                            事前に適用可否を判断できることで、不要なモデル構築や学習工程を省略でき、
+                            他研究における既存手法の選定を効率化できる点に貢献した
+                        </li>
                     </ul>
                 </div>
 
                 <h2>使用技術</h2>
                 <div class="works-box">
                     <ul class="tag-list">
-                        <li>例：JavaScript</li>
-                        <li>例：Discord.js</li>
-                        <li>例：MySQL</li>
-                        <li>例：Spring Boot</li>
+                        <li>Python</li>
+                        <li>Linux</li>
                     </ul>
                 </div>
 
-                <h2>機能</h2>
+                <h2>特徴（既存手法：アクティブシェイプモデル）</h2>
                 <div class="works-box">
                     <ul class="works-list">
-                        <li>機能1</li>
-                        <li>機能2</li>
-                        <li>機能3</li>
+                        <li>
+                            少量の学習データ（本研究では10個）を用いて、三次元形状空間上で形状変形が可能
+                        </li>
+                        <li>
+                            少ないパラメータ数で形状を表現・変形できるため、計算コストが比較的低い
+                        </li>
+                        <li>
+                            物体形状の特性によって、形状変形が安定して行える場合と、
+                            手法の適用自体が困難な場合が存在する
+                        </li>
                     </ul>
                 </div>
 
                 <h2>工夫点</h2>
                 <div class="works-box">
                     <ul class="works-list">
-                        <li>工夫点1（なぜそうしたか／効果）</li>
-                        <li>工夫点2（設計・保守性・安全性など）</li>
-                        <li>工夫点3（パフォーマンス・運用など）</li>
+                        <li>
+                            特定の物体名を列挙するのではなく、
+                            ASMが適用可能か否かを左右する形状的特徴に着目することで、
+                            他分野・他研究にも応用しやすい形で知見を整理した
+                        </li>
+                        <li>
+                            Pythonを用いて実験コードを構築し、
+                            実験条件の変更や再実行を容易にすることで検証効率を向上させた
+                        </li>
+                        <li>
+                            Linux環境上で実験を行い、
+                            バッチ実行やスクリプト化により検証回数を増やすことで評価の信頼性を高めた
+                        </li>
                     </ul>
                 </div>
 
-                <h2>画面・動作イメージ</h2>
-                <div class="works-box">
-                    <p class="note">
-                        スクリーンショット等
-                    </p>
-                </div>
-
-                <h2>リンク</h2>
-                <div class="works-box">
-                    <ul class="works-links">
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">デモ（URL）</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">ソース（URL）</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">解説（URL）</a></li>
-                    </ul>
-                </div>
+                <p>
+                    ※情報保護の観点から、実験結果の詳細な数値、画像、動作イメージおよび各種リンクの掲載は控えています。
+                </p>
 
                 <div class="works-nav">
                     <a class="btn" href="../index.html">トップへ戻る</a>
