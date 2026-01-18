@@ -1,25 +1,17 @@
-(async () => {
-    const mount = document.getElementById("footer");
-    if (!mount) return;
+async function include(selector, url) {
+    const el = document.querySelector(selector);
+    if (!el) return;
 
-    const scriptUrl = new URL(document.currentScript.src, location.href);
-    const footerUrl = new URL("../footer.html", scriptUrl);
-
-    console.log("include.js:", scriptUrl.href);
-    console.log("footer url:", footerUrl.href);
-
-    try {
-        const res = await fetch(footerUrl.href, { cache: "no-store" });
-        console.log("footer status:", res.status);
-
-        if (!res.ok) {
-            mount.innerHTML = `<div style="color:red">footer load failed: ${res.status}</div>`;
-            return;
-        }
-
-        mount.innerHTML = await res.text();
-    } catch (e) {
-        console.error(e);
-        mount.innerHTML = `<div style="color:red">footer load error</div>`;
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) {
+        console.error("include failed:", res.status, url);
+        return;
     }
+    el.innerHTML = await res.text();
+}
+
+(async () => {
+    // index.html と同階層から見た相対パス
+    await include("#sidebar", "components/sidebar.html");
+    await include("#footer", "components/footer.html");
 })();
