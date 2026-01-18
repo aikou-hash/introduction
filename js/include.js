@@ -1,7 +1,13 @@
-async function include(selector, url) {
+function withBase(path) {
+    const base = document.body.dataset.base || "./";
+    return base + path;
+}
+
+async function include(selector, path) {
     const el = document.querySelector(selector);
     if (!el) return;
 
+    const url = withBase(path);
     const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) {
         console.error("include failed:", res.status, url);
@@ -11,7 +17,6 @@ async function include(selector, url) {
 }
 
 (async () => {
-    // index.html と同階層から見た相対パス
     await include("#sidebar", "components/sidebar.html");
     await include("#footer", "components/footer.html");
 })();
