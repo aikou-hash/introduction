@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>製作物名｜愛甲 隼</title>
+    <title>Discord Bot 開発｜愛甲 隼</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="works.css">
@@ -13,9 +13,10 @@
     <div id="outer">
 
         <header class="works-header">
-            <h1>製作物名</h1>
+            <h1>Discord Bot 開発（複数プロジェクト）</h1>
             <p class="works-lead">
-                1〜2行で概要を記載（何を解決するか何ができるか等）
+                Discordサーバー運営を効率化するためのBotを設計・開発。<br>
+                フォーム入力・権限管理・外部ファイル操作などを自動化し、運営負荷を低減しました。
             </p>
         </header>
 
@@ -23,64 +24,92 @@
             <div class="inner">
 
                 <div class="works-meta">
-                    <div class="meta-item"><span class="meta-label">種別</span><span class="meta-value">例：個人開発 / 受託 /
-                            研究</span></div>
-                    <div class="meta-item"><span class="meta-label">期間</span><span
-                            class="meta-value">例：YYYY/MM〜YYYY/MM</span></div>
-                    <div class="meta-item"><span class="meta-label">担当</span><span class="meta-value">例：設計 / 実装 /
-                            テスト</span></div>
+                    <div class="meta-item">
+                        <span class="meta-label">種別</span>
+                        <span class="meta-value">個人開発</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">期間</span>
+                        <span class="meta-value">2024/09〜現在</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">担当</span>
+                        <span class="meta-value">要件整理 / 設計 / 実装 / 運用</span>
+                    </div>
                 </div>
 
                 <h2>概要</h2>
                 <div class="works-box">
                     <ul class="works-list">
-                        <li>目的（何のために作ったか）</li>
-                        <li>成果（何ができるようになったか）</li>
-                        <li>利用シーン（想定ユーザー／用途）</li>
+                        <li>目的：Discordサーバー運営における手作業や人的ミスを削減し、安定運用を実現するため</li>
+                        <li>成果：選手登録・権限管理・Linuxサーバー上の運用作業（ファイル操作等）をBotで自動化</li>
+                        <li>利用シーン：ゲーム大会運営、コミュニティ管理、VPS上のLinuxサーバー運用支援</li>
                     </ul>
+                </div>
+
+                <h2>画面・動作イメージ</h2>
+                <div class="works-box">
+                    <img src="" alt="Discord Botの操作画面（ボタン、モーダル、結果表示など）">
+                    <p class="works-note">
+                        画像準備中・・・
+                    </p>
                 </div>
 
                 <h2>使用技術</h2>
                 <div class="works-box">
                     <ul class="tag-list">
-                        <li>例：JavaScript</li>
-                        <li>例：Discord.js</li>
-                        <li>例：MySQL</li>
-                        <li>例：Spring Boot</li>
+                        <li>JavaScript (Node.js)</li>
+                        <li>Discord.js v14</li>
+                        <li>JSON / File I/O</li>
+                        <li>Linux (VPS)</li>
+                        <li>screen / systemd</li>
                     </ul>
                 </div>
 
                 <h2>機能</h2>
                 <div class="works-box">
                     <ul class="works-list">
-                        <li>機能1</li>
-                        <li>機能2</li>
-                        <li>機能3</li>
+                        <li>モーダルフォームを用いた情報入力（名前・URL・画像など）</li>
+                        <li>ボタン操作による処理分岐・状態管理</li>
+                        <li>ロールに基づく権限チェックと操作制限</li>
+                        <li>
+                            Discord経由でのVPS上ファイル編集（例：Whitelist管理）<br>
+                            └ サーバーへ直接接続できないメンバーでも運用作業が可能
+                        </li>
+                        <li>
+                            Linux操作が分からない人でも扱える運用導線（ボタン・フォーム中心）<br>
+                            └ 運営の技術力に依存せず稼働できる構成を意識
+                        </li>
+                        <li>ミニゲームBot（ブラックジャック等）の実装</li>
                     </ul>
                 </div>
 
                 <h2>工夫点</h2>
                 <div class="works-box">
                     <ul class="works-list">
-                        <li>工夫点1（なぜそうしたか／効果）</li>
-                        <li>工夫点2（設計・保守性・安全性など）</li>
-                        <li>工夫点3（パフォーマンス・運用など）</li>
+                        <li>
+                            Discord.js v14のInteraction構造を前提に、
+                            コマンド・ボタン・モーダルを役割ごとに分離した設計を採用
+                        </li>
+                        <li>
+                            操作単位で権限チェックを行い、
+                            誤操作や不正操作を防止する設計
+                        </li>
+                        <li>
+                            Linuxサーバー運用を「Discord上の操作」に置き換え、
+                            サーバーへの接続権限やLinux知識がなくても運用できるようにした
+                        </li>
+                        <li>
+                            ファイル操作処理をサービス層として分離し、
+                            Bot本体の保守性・拡張性を向上
+                        </li>
                     </ul>
-                </div>
-
-                <h2>画面・動作イメージ</h2>
-                <div class="works-box">
-                    <p class="note">
-                        スクリーンショット等
-                    </p>
                 </div>
 
                 <h2>リンク</h2>
                 <div class="works-box">
                     <ul class="works-links">
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">デモ（URL）</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">ソース（URL）</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">解説（URL）</a></li>
+                        <li><span>※ 実運用中のBotのため、デモ・ソースコードは非公開</span></li>
                     </ul>
                 </div>
 
@@ -91,18 +120,14 @@
             </div>
         </div>
 
-        <aside>
-            <div class="right-title">プログラム集</div>
-            <div class="link">
-                <ul>
-                    <li><a href="discord-bot.html">Discord Bot</a></li>
-                    <li><a href="minecraft-addon.html">マイクラアドオン</a></li>
-                    <li><a href="research.html">卒業研究</a></li>
-                </ul>
-            </div>
-        </aside>
+        <div id="sidebar"></div>
 
-        <footer>2026 愛甲 隼のホームページ</footer>
+        <footer>
+            <div id="footer"></div>
+        </footer>
+
+        <body data-base="../"></body>
+        <script src="../js/include.js"></script>
 
     </div>
 </body>
